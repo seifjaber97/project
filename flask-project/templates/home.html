@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='css/aos.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/venobox.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="bg">
+        <header id="header">
+          <div class="container">
+          <div id="logo" class="pull-left">
+            <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt title /></a>
+          </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                <li class="menu-active"><a href="">Home</a></li>
+                <li><a  href="#about"><p>About</p></a></li>
+                <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+          </header>
+         <section id="intro">
+            <div class="intro-container" data-aos="zoom-in" data-aos-delay={100}>
+              <h1 class="mb-4 pb-0"><span>Student</span>  Performance Prediction</h1>
+              <div class="flex-row">
+                  
+              <a href="/student" class="about-btn  scrollto blk">  Student </a>
+              <a href="/staff" class="about-btn scrollto">Staff member</a>
+              </div>
+        
+            </div>
+          </section>
+        </div>
+
+         <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='js/aos.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.easing.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/superfish.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/validate.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/venobox.min.js')}}"></script>
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

@@ -6,11 +6,11 @@
 
 		<title> Predict</title>
 		<!-- Fonts and icons -->
-		<script src="./assets/js/plugin/webfont/webfont.min.js"></script>
+		<script src="{{ url_for('static', filename='stdjs/webfont.min.js')}}"></script>
 		<script>
 			WebFont.load({
 				google: {"families":["Lato:300,400,700,900"]},
-				custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+				custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/css/fonts.min.css']},
 				active: function() {
 					sessionStorage.fonts = true;
 				}
@@ -18,8 +18,8 @@
 		</script>
 
 		<!-- CSS Files -->
-		<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./assets/css/predict.min.css">
+		<link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+		<link href="{{ url_for('static', filename='css/predict.min.css')}}" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	
@@ -30,20 +30,19 @@
 			<!-- Logo Header -->
 			<div class="logo-header">
 				
-				<a href="index.html" class="logo">
-					<img src="./assets/img/icon.ico" alt="navbar brand" class="navbar-brand">
+				<a href="home.html" class="logo">
+					<img src="l.png" alt="navbar brand" class="navbar-brand" height="60px" width="60px">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
 						<i class="fas fa-bars"></i>
 					</span>
 				</button>
-				
 				<button class="topbar-toggler more"><i class="fas fa-ellipsis-v"></i></button>
 				<div class="nav-toggle">
-					<button class="btn btn-toggle toggle-sidebar">
+					<!--<button class="btn btn-toggle toggle-sidebar">
 						<i class="fas fa-bars"></i>
-					</button>
+					</button>-->
 				</div>
 			</div>
 			<!-- End Logo Header -->
@@ -53,7 +52,7 @@
 				
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
-						<form class="navbar-left navbar-form nav-search mr-md-3">
+						<!--<form class="navbar-left navbar-form nav-search mr-md-3">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<button type="submit" class="btn btn-search pr-1">
@@ -62,7 +61,7 @@
 								</div>
 								<input type="text" placeholder="Search ..." class="form-control">
 							</div>
-						</form>
+						</form>-->
 					</div>
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item toggle-nav-search hidden-caret">
@@ -72,10 +71,10 @@
 						</li>
 					
 						<li class="nav-item dropdown hidden-caret">
-							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<!--<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fa fa-bell"></i>
 								<span class="notification">1</span>
-							</a>
+							</a>-->
 						
 						</li>
 						
@@ -125,7 +124,7 @@
 								<span>
 									Zakaria
 									<span class="user-level">Administrator</span>
-									<span class="caret"></span>
+									<!--<span class="caret"></span>-->
 								</span>
 							</a>
 							<div class="clearfix"></div>
@@ -152,7 +151,7 @@
 						</div>
 					</div>
 					<ul class="nav nav-primary">
-						<li class="nav-item active">
+						<!--<li class="nav-item active">
 							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
@@ -168,13 +167,13 @@
 								
 								</ul>
 							</div>
-						</li>
-						<li class="nav-section">
+						</li>-->
+						<!--<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
 							<h4 class="text-section">Components</h4>
-						</li>
+						</li>-->
 						
 		
 					</ul>
@@ -322,31 +321,31 @@
 						<div class="col-md-4">
 							<div class="card">
 								<div class="card-body">
-									<div class="card-title fw-mediumbold">Students who have weakness</div>
+									<div class="card-title fw-mediumbold">At Risk Students</div>
 									<div class="card-list">
 										<div class="item-list">
 											<div class="avatar">
-												<img src="./assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
-												<div class="username">Jimmy Denis</div>
-												<div class="status">Soft</div>
+												<div class="username">201511042</div>
+												<div class="status">Software Engineering</div>
 											</div>
 										
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="./assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
-												<div class="username">Chad</div>
-												<div class="status">DS</div>
+												<div class="username">201720468</div>
+												<div class="status">Software Engineering</div>
 											</div>
 										
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="./assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Talha</div>
@@ -356,7 +355,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="./assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">John Doe</div>
@@ -366,7 +365,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="./assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Talha</div>
@@ -376,7 +375,7 @@
 										</div>
 										<div class="item-list">
 											<div class="avatar">
-												<img src="./assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
+												<img src="static/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
 											</div>
 											<div class="info-user ml-3">
 												<div class="username">Jimmy Denis</div>
@@ -417,11 +416,11 @@
 					<nav class="pull-left">
 						<ul class="nav">
 				
-							<li class="nav-item">
+							<!--<li class="nav-item">
 								<a class="nav-link" href="#">
 									Help
 								</a>
-							</li>
+							</li>-->
 							
 						</ul>
 					</nav>
@@ -434,32 +433,29 @@
 		<!-- End Custom template -->
 	</div>
 	<!--   Core JS Files   -->
-	<script src="./assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="./assets/js/core/popper.min.js"></script>
-	<script src="./assets/js/core/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='stdjs/jquery.3.2.1.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='stdjs/popper.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='stdjs/bootstrap.min.js')}}"></script>
 
 	<!-- jQuery UI -->
-	<script src="./assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="./assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<script src="{{ url_for('static', filename='stdjs/jquery-ui.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='stdjs/jquery.ui.touch-punch.min.js')}}"></script>
 
 	<!-- jQuery Scrollbar -->
-	<script src="./assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="{{ url_for('static', filename='stdjs/jquery.scrollbar.min.js')}}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/fontawesome.min.js" integrity="sha512-xs1el+uLI2T4QTvRIv3kFBWvjQiPVAvKQM4kzZrJoLVZ1tSz1E0fkZch0cjd1f+sTk2MtBCHbP3PiVTdoFKAJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 	<!-- Chart JS -->
-	<script src="./assets/js/plugin/chart.js/chart.min.js"></script>
+	<script src="{{ url_for('static', filename='js/chart.min.js')}}"></script>
 
 	<!-- Chart Circle -->
-	<script src="./assets/js/plugin/chart-circle/circles.min.js"></script>
+	<script src="{{ url_for('static', filename='js/circles.min.js')}}"></script>
 
 	<!-- predict JS -->
-	<script src="./assets/js/predict.min.js"></script>
-	
-
-	
-	<script src="./assets/js/setting-demo.js"></script>
-	<script src="./assets/js/demo.js"></script>
+	<script src="{{ url_for('static', filename='stdjs/predict.min.js')}}"></script>
+	<script src="{{ url_for('static', filename='stdjs/setting-demo.js')}}"></script>
+	<script src="{{ url_for('static', filename='stdjs/demo.js')}}"></script>
 
 	<script>
 		//circles
