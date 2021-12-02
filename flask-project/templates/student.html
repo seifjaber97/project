@@ -30,22 +30,20 @@
 			<!-- Logo Header -->
 			<div class="logo-header">
 				
-				<a href="#" class="logo">
+				<a href="/" class="logo">
 					<img src="../static/img/lg.png" alt="navbar brand" class="navbar-brand">
 				</a>
 		
 			</div>
 			<!-- End Logo Header -->
-
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" >
-
 			</nav>
 			<!-- End Navbar -->
 		</div>
 
 		
-
+		<form method="post" action="result" autocomplete="off">
 		<div class="main-panel">
 			<div class="content">
 			  <div class="panel-header bg-primary-gradient">
@@ -62,6 +60,7 @@
 						<div class="card-header">
 						  <div class="card-title fw-bold">
 							Prediction based on subjects
+							
 						  </div>
 						</div>
 						<div class="card-body">
@@ -71,45 +70,78 @@
 								<input
 								  type="text"
 								  class="form-control"
-								  id=""
-								  placeholder="subject 1"
+								  name="id_std"
+								  value=""
+								  placeholder=" ID"
 								/>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 2"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input list="subjects" type="text"  name="s1" value="" class="form-control" placeholder="Subject 1" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n1" value='' class="form-control" placeholder="grade" readonly>
+									  
+									</div>
+								  </div>
+							  </div> 
+							  <div class="form-group">
+								<div class="row">
+									<div class="col">
+									  <input type="text" list="subjects" name="s2" value="" class="form-control" placeholder="Subject 2" aria-label="">
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n2" value='' class="form-control" placeholder="grade" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 3"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input type="text" list="subjects" name="s3" value="" class="form-control" placeholder="Subject 3" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n3" value='' class="form-control" placeholder="grade" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 4"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input type="text"  list="subjects" name="s4" value="" class="form-control" placeholder="Subject 4" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n4" value='' class="form-control" placeholder="grade" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 5"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input type="text" list="subjects" name="s5" value="" class="form-control" placeholder="Subject 5" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n5" value='' class="form-control" placeholder="grade" readonly>
+									</div>
+								  </div>
+							  </div>
+							  <div class="form-group">
+								<div class="row">
+									<div class="col">
+									</div>
+									<div class="col-md-3">
+										<input type="text" name="n6" value='' class="form-control" placeholder="Predicited result" readonly>
+									  </div>
+									<div class="col-md-3">
+									  <input type="text" name="n7" value='' class="form-control" placeholder="Avg rank" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
 								<button
-								  type="button"
+
+								  type="submit"
 								  class="btn btn-primary btn-lg btn-block fw-bold"
 								>
 								  Predicit
@@ -125,8 +157,16 @@
 			  </div>
 			</div>
 		  </div>
-		  
 
+		  <datalist id="subjects">
+			<option value="Probability & Statistics 1">
+			<option value="C++">
+			<option value="Calculus 1">
+			<option value="Object Oriented Programming 1">
+			<option value="Machine Learning">
+		  </datalist>
+		  
+		</form>
 		
 
 		

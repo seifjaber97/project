@@ -30,92 +30,26 @@
 			<!-- Logo Header -->
 			<div class="logo-header">
 				
-				<a href="index.html" class="logo">
-					<img src="./assets/img/icon.ico" alt="navbar brand" class="navbar-brand">
+				<a href="/student" class="logo">
+					<img src="../static/img/lg.png" alt="navbar brand" class="navbar-brand">
 				</a>
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-						<i class="fas fa-bars"></i>
-					</span>
-				</button>
-				<button class="topbar-toggler more"><i class="fas fa-ellipsis-v"></i></button>
-				<div class="nav-toggle">
-					<button class="btn btn-toggle toggle-sidebar">
-						<i class="fas fa-bars"></i>
-					</button>
-				</div>
+		
 			</div>
 			<!-- End Logo Header -->
-
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" >
-				
-				<div class="container-fluid">
-					<div class="collapse" id="search-nav">
-						<form class="navbar-left navbar-form nav-search mr-md-3">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<button type="submit" class="btn btn-search pr-1">
-										<i class="fa fa-search search-icon"></i>
-									</button>
-								</div>
-								<input type="text" placeholder="Search ..." class="form-control">
-							</div>
-						</form>
-					</div>
-					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-						<li class="nav-item toggle-nav-search hidden-caret">
-							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
-								<i class="fa fa-search"></i>
-							</a>
-						</li>
-					
-					
-						
-						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-								<div class="avatar-sm">
-									<img src="./assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
-								</div>
-							</a>
-							<ul class="dropdown-menu dropdown-user animated fadeIn">
-								<div class="dropdown-user-scroll scrollbar-outer">
-									<li>
-										<div class="user-box">
-											<div class="avatar-lg"><img src="./assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
-											<div class="u-text">
-												<h4>Zakaria</h4>
-												<p class="text-muted">predict@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">My Profile</a>
-										<div class="dropdown-divider"></div>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
-									</li>
-								</div>
-							</ul>
-						</li>
-					</ul>
-				</div>
 			</nav>
 			<!-- End Navbar -->
 		</div>
 
-		<!-- Sidebar -->
 		
-		<!-- End Sidebar -->
-
+		<form method="post" action="result" autocomplete="off">
 		<div class="main-panel">
 			<div class="content">
 			  <div class="panel-header bg-primary-gradient">
 				<div class="page-inner py-5">
 				  <div
-					class="d-flex align-items-left flex-column flex-md-row"
-				  >
+					class="d-flex align-items-left flex-column flex-md-row">
 					<div>
 					  <h2 class="text-white pb-2 fw-bold">Student</h2>
 					</div>
@@ -126,6 +60,7 @@
 						<div class="card-header">
 						  <div class="card-title fw-bold">
 							Prediction based on subjects
+							
 						  </div>
 						</div>
 						<div class="card-body">
@@ -135,45 +70,80 @@
 								<input
 								  type="text"
 								  class="form-control"
-								  id=""
-								  placeholder="subject 1"
+								  name="id_std"
+								  value="{{data[2]}}"
+								  placeholder=" ID"
 								/>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 2"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input type="text" list="subjects" name="s1" value="{{data[1][0]}}" class="form-control" placeholder="Subject 1" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n1" value='{{data[0][data[1][0]].values[0]}}' class="form-control" placeholder="" readonly>
+									  
+									</div>
+								  </div>
+							  </div> 
+							  <div class="form-group">
+								<div class="row">
+									<div class="col">
+									  <input type="text"  list="subjects" name="s2" value="{{data[1][1]}}" class="form-control" placeholder="Subject 2" aria-label="">
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n2" value='{{data[0][data[1][1]].values[0]}}' class="form-control" placeholder="" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 3"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input type="text" list="subjects" name="s3" value="{{data[1][2]}}" class="form-control" placeholder="Subject 3" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n3" value='{{data[0][data[1][2]].values[0]}}' class="form-control" placeholder="" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 4"
-								/>
+								<div class="row">
+									<div class="col">
+									  <input type="text"  list="subjects" name="s4" value="{{data[1][3]}}" class="form-control" placeholder="Subject 4" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n4" value='{{data[0][data[1][3]].values[0]}}' class="form-control" placeholder="" readonly>
+									</div>
+								  </div>
+							  </div>
+                              <div class="form-group">
+								<div class="row">
+									<div class="col">
+									  <input type="text"  list="subjects" name="s5" value="{{data[1][4]}}" class="form-control" placeholder="Subject 5" >
+									</div>
+									<div class="col-md-2">
+									  <input type="text" name="n5" value='{{data[0][data[1][4]].values[0]}}' class="form-control" placeholder="" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
-								<input
-								  type="text"
-								  class="form-control"
-								  id=""
-								  placeholder="subject 5"
-								/>
+								<div class="row">
+									<div class="col"></div>
+									<div class="col-md-3">
+                                    <label>Predicted Result</label></div>
+                                    <div class="col-md-3">
+                                        
+										<input type="text" name="n5" value='{{data[0]["Predicted Result"].values[0]}}' class="form-control" placeholder="Predicited result" readonly>
+									  </div>
+									<div class="col-md-3">
+									  <input type="text" name="n5" value='{{data[0]["avg rank"].values[0]}}' class="form-control" placeholder="" readonly>
+									</div>
+								  </div>
 							  </div>
 							  <div class="form-group">
 								<button
-								  type="button"
+
+								  type="submit"
 								  class="btn btn-primary btn-lg btn-block fw-bold"
 								>
 								  Predicit
@@ -189,8 +159,15 @@
 			  </div>
 			</div>
 		  </div>
+          <datalist id="subjects">
+			<option value="Probability & Statistics 1">
+			<option value="C++">
+			<option value="Calculus 1">
+			<option value="Object Oriented Programming 1">
+			<option value="Machine Learning">
+		  </datalist>
 		  
-
+		</form>
 		
 
 		
@@ -218,7 +195,7 @@
 	<!--   Core JS Files   -->
 	<script src="{{ url_for('static', filename='stdjs/webfont.min.js')}}"></script>
 	<script src="{{ url_for('static', filename='stdjs/jquery.3.2.1.min.js')}}"></script>
-	<script src="{{ url_for('static', filename='stdjs/jquery.3.2.1.min.js')}}"></script>
+	<!--<script src="{{ url_for('static', filename='stdjs/jquery.3.2.1.min.js')}}"></script>-->
 	<script src="{{ url_for('static', filename='stdjs/popper.min.js')}}"></script>
 	<script src="{{ url_for('static', filename='stdjs/bootstrap.min.js')}}"></script>
 
