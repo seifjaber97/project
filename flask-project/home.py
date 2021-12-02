@@ -8,7 +8,7 @@ def home_page():
 
 @app.route('/result',methods=['POST','GET'])
 def result_page():
-	file="./all-subjects-prediction.xlsx"
+	file="./final-result.xlsx"
 	d=pd.read_excel(file)
 	if request.method=="POST":
 		ID=request.form['id_std']
@@ -18,7 +18,7 @@ def result_page():
 		s4=request.form['s4']
 		s5=request.form['s5']
 		s6='avg rank'
-		s7='Predicted Result'
+		s7='GPA'
 		data=d[d['SI_ID']==int(ID)]
 		data=data[[s1,s2,s3,s4,s5,s6,s7]]
 		cols=[s1,s2,s3,s4,s5]
