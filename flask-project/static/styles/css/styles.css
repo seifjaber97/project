@@ -8,11 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  background: #fff;
-  color: #2f3138;
-  font-family: "Open Sans", sans-serif;
-}
+
 .bg {
   background-image: url("../img/bk3.jpg");
 
@@ -146,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-with-bg {
-  background-color: #f6f7fd;
+  background-color: #3c4eb3;
 }
 
 /*--------------------------------------------------------------
